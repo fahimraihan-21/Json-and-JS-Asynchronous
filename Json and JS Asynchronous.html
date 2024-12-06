@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS</title>
+
+</head>
+
+<body>
+
+    <script>
+const jsondata={
+    "name" :"fahim",
+    "age" : 13,
+    "hobbies" :["sleeping" , "gaming"]
+
+};
+//accesing jason data
+document.write("name: ",jsondata.name);
+    document.write("age: ", jsondata.age);
+    document.write("first hobby: ", jsondata.hobbies [0]);
+    //updating jason data
+    jsondata.name="fahim raihan";
+    document.write("updated name : ",jsondata.name);
+    //adding new property
+    jsondata.proffesion="student";
+    document.write("profrssion",jsondata.proffesion);
+
+    //converting jason to a string 
+    const jasonstring=JASON.stringify(jsondata);
+    // converting  string to back to json
+    const jasonobject=JSON.parse(jasonstring
+    );
+    document.write("parsed JSON object ",jasonobject);
+
+
+
+    </script>
+
+</body>
+
+</html>

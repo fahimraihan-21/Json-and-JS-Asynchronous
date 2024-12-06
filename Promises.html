@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS</title>
+
+</head>
+
+<body>
+<p id="demo"></p>
+    <script>
+let mypromises =new Promise(function(myresolve,myreject)
+{
+    // producing code may take some time 
+    let x= 0; //some code (try to change  x to 5)
+    if (x==0){
+        myresolve("ok"); // when succesfully
+    } else{
+        myreject("error"); // when error
+    }
+});
+mypromises.then(
+    function(value){
+        sum(10,5);
+    
+    },
+     function (error) {
+        sum(10, 5);
+
+    }
+
+)
+function mydisplay(some){
+    document.getElementById("demo").innerHTML=some;
+}
+function sum(a,b){
+    var sum=a+b;
+    mydisplay(sum);
+}
+    </script>
+
+</body>
+
+</html>
